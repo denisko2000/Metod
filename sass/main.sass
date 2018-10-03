@@ -1,0 +1,516 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #fff
+	font-family: "FontAwesome", $default-font
+	font-size: 1.5rem
+	padding-left: 5px
+	padding-top: 2px
+	
+
+
+html
+	font-size: 10px
+
+body
+	font-size: 10px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow: hidden
+	input, textarea
+		color: #fff
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+	ul
+		margin: 0
+button
+	background: none
+	border: none
+	outline: none
+	&:hover
+		outline: none
+
+a
+	color: #fff
+	&:hover
+		text-decoration: none
+		color: #fff
+
+.yellow
+	color: $yellow
+.circle_buttons
+	.violet
+		background-color: $violet
+li
+	list-style: none
+.container-fluid
+	margin: 0 6.45rem 
+	width: calc(100% - 12.9rem)
+/*.container*/
+/*	height: 100vh*/
+/*	display: flex*/
+/*	flex-direction: column*/
+.col
+	padding: 0			
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+/*custom-styles*/
+/*end_of_custon-styles*/
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6
+	font-family: $header-font
+	text-transform: uppercase
+
+.button
+	font-size: 2rem
+	a
+		display: block
+		padding: 0 5.95rem
+		transition: all 0.7s ease
+		border-radius: 6px
+
+.button-yellow
+	a
+		color: $yellow
+		border: 0.3rem solid rgba(245, 231, 0, 0.9)
+		&:hover
+			background-color:  rgba(245, 231, 0, 0.9)
+			color: #1a237e
+
+.button-violet
+	a
+		color: $violet
+		border: 0.3rem solid $violet
+		&:hover
+			background-color:   $violet
+			color: $yellow
+
+
+.hamburger
+	position: absolute
+	right: 0
+	&:hover
+		opacity: 1
+	.hamburger-inner:hover, .hamburger-inner:hover:after, .hamburger-inner:hover:before
+		background: $yellow
+/*first-section styles*/
+
+
+.menu, .share,.circle_buttons
+	position: absolute
+.first_section.section
+	background-image: url(../img/first_bg.png) 
+	height: 100vh
+	background-size: cover
+	background-position: top center
+	background-repeat: no-repeat
+	.header
+		.logo
+			width: 120%
+		.lang_menu, .blog 
+			a
+				font-size: 1.8rem
+		.button_top
+			font-size: 1.8rem
+			font-weight: 700
+			white-space: nowrap
+			padding: 0
+			a
+				padding: 0.1rem 0.6rem
+				border-width: 0.15rem				
+				color: #fff
+	.content
+		display: flex
+		flex-direction: column
+		justify-content: center
+		position: relative
+		text-align: center
+		h1
+			font-size: 16rem
+			color: #fff
+			font-family: $default-font
+			font-weight: 900
+		small
+			color: #fff
+			font-size: 3.5rem
+			letter-spacing: 0.23em
+			margin-top: -1.9em
+			font-family: $default-font
+			font-weight: medium
+			display: block
+			white-space: nowrap
+	.first_section-footer.footer
+		padding-bottom: 0.5rem
+
+.lang_menu
+	position: relative
+	transition: all 1s ease
+.open.lang_submenu
+	display: flex
+.lang_submenu
+	transition: all 1s ease-in
+	display: none
+	background: rgba(192, 191, 191, 0.37)
+	position: absolute
+	padding: 0
+	width: 100%
+	justify-content: center
+	i
+		color: transparent
+
+	
+.lang_menu, .lang_submenu, .blog
+	padding: 0
+	a
+		font-size: 1.3rem
+		font-weight: 700
+		white-space: nowrap
+		&:hover
+			color: $yellow
+		
+
+.section
+	max-height: 100vh
+	height: 100vh
+	display: flex
+	flex-direction: column
+	transition: all 1s ease
+	.header
+		padding: 1rem 0
+		flex: 0 0 auto
+		text-align: center
+		.logo
+			margin: 0.8rem 0 
+			display: flex
+			align-items: center
+		.social_menu
+			display: flex
+			margin: 0
+			align-items: center
+			i
+				transition: all 0.5s ease
+				font-size: 1.5rem
+				padding-right: 1rem
+				&:hover
+					color: $yellow
+		.button_top
+			font-size: 1.3rem
+			font-weight: 700
+			white-space: nowrap
+			padding: 0
+			a
+				padding: 0.1rem 0.6rem
+				border-width: 0.15rem				
+				color: #fff
+		
+	.content
+		flex: 1 1 auto
+		position: relative
+		overflow: hidden
+		.text
+			padding-right: 7.36rem
+			text-align: justify
+			
+			h2
+				margin: 3rem 0 1.1rem
+				text-align: center
+				color: $violet
+				font-size: 3rem
+				font-weight: 900
+				line-height: 1.2
+			small, label
+				font-size: 1.63rem
+				color: $violet
+				letter-spacing: 0
+				font-weight: 700
+				margin: 0 0 10px 0
+				display: block
+				text-align: left
+			blockquote
+				color: $violet
+				position: relative
+				text-align: center
+				&:before 
+					content: "\201C"
+					font-family: $default-font
+					position: absolute
+					font-size: 3.4rem
+					left: -15px
+					top: 10px
+					line-height: 0
+				&:after
+					content: "\201D"
+					font-family: $default-font
+					position: absolute
+					font-size: 3.4rem
+					right: -15px
+					bottom: -10px
+					line-height: 0
+
+	.footer
+		position: relative
+		padding-bottom: 3.5rem
+		flex: 0 0 auto
+		transition: all 0.7s ease
+		padding-top: 2rem
+		.button_common
+
+		.button_striped
+			padding: 0
+			span
+				background: #fff
+				border-radius: 0.08rem
+				height: 0.53rem
+				width: 1.58rem
+				display: inline-block
+				margin-right: 1.36rem
+				&:last-child
+					margin: 0
+		.button_next
+			font-size: 1.63rem
+			text-transform: uppercase
+			text-align: center
+			padding-top: 40px
+			a
+				display: block
+				margin: 0 auto
+			img
+				height: 4rem
+
+.share
+	left: 0
+	top: 50vh
+	margin-top: -1.615rem
+	margin-left: 2rem
+	img
+		width: 3rem
+		height: 3rem
+.circle_buttons
+	right: 0
+	top: 50vh
+	margin-top: -2.285rem
+	margin-right: 2rem
+	z-index: 10
+	span
+		border-radius: 50%
+		background-color: #fff
+		width: 0.8rem
+		height: 0.8rem
+		display: block
+		margin-bottom: 0.59rem
+
+/*End of styling first screen*/
+
+.cont_footer
+	flex: 1 0 0
+	display: flex
+	justify-content: space-between
+	flex-direction: column
+/*Second screen*/
+.second_section
+	position: relative
+	background: url(../img/second_bg.png) top right no-repeat /cover 
+	.cont_footer
+		background-image: linear-gradient(to right, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 50%,rgba(255,255,255,0) 50%,rgba(246,246,246,0) 100%)
+	&-header
+		background: rgba(66, 192, 255, 0.4)
+
+.third_section
+	position: relative
+	background: url(../img/third_bg.png) top left no-repeat /cover 
+	&-header
+		background: rgba(71, 151, 229, 0.42)
+	.content
+		.text
+			padding-right: 0
+
+.forth_section
+	position: relative
+	background: url(../img/forth_bg.png) top left no-repeat /cover 
+	&-header
+		background: rgba(32, 79, 211, 0.42)
+	.content
+		.text
+			padding-right: 0
+			small
+				color: #fff
+		.calc
+			label
+				color: $yellow
+				display: inline-block
+
+.fifth_section
+	position: relative
+	background: url(../img/fifth_bg.png) top left no-repeat /cover 
+	.cont_footer
+		background-image: linear-gradient(to left, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 50%,rgba(255,255,255,0) 50%,rgba(246,246,246,0) 100%)
+	&-header
+		background: rgba(71, 151, 229, 0.42)
+	.content
+		.text
+			padding-right: 0
+			padding-left: 7.36rem
+
+.six_section
+	position: relative
+	background: url(../img/six_bg.png) top left no-repeat /cover 
+	.cont_footer
+		background-image: linear-gradient(to right, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 50%,rgba(255,255,255,0) 50%,rgba(246,246,246,0) 100%)
+	&-header
+		background: rgba(71, 151, 229, 0.42)
+
+.seven_section
+	position: relative
+	background: url(../img/seven_bg.png) top left no-repeat /cover 
+	.cont_footer
+		background-image: linear-gradient(to left, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 50%,rgba(255,255,255,0) 50%,rgba(246,246,246,0) 100%)
+	&-header
+		background: rgba(71, 151, 229, 0.42)
+	.content
+		.text
+			padding-right: 0
+			padding-left: 7.36rem 	
+
+.eight_section
+	position: relative
+	background: url(../img/eight_bg.png) top left no-repeat /cover 
+	.cont_footer
+		background-image: linear-gradient(to right, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 50%,rgba(255,255,255,0) 50%,rgba(246,246,246,0) 100%)
+	&-header
+		background: rgba(71, 151, 229, 0.42)
+
+.nine_section
+	position: relative
+	background: url(../img/nine_bg.png) top left no-repeat /cover 
+	.cont_footer
+		background-image: linear-gradient(to left, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 50%,rgba(255,255,255,0) 50%,rgba(246,246,246,0) 100%)
+	&-header
+		background: rgba(71, 151, 229, 0.42)
+	.content
+		.text, .partners
+			padding-right: 0
+			padding-left: 7.36rem 
+
+
+.ten_section
+	position: relative
+	background: url(../img/ten_bg.png) top left no-repeat /cover 
+	.cont_footer
+		background-image: linear-gradient(to right, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 50%,rgba(255,255,255,0) 50%,rgba(246,246,246,0) 100%)
+	&-header
+		background: rgba(71, 151, 229, 0.42)
+
+.eleven_section
+	position: relative
+	background: url(../img/eleven_bg.png) top left no-repeat /cover 
+	.cont_footer
+		background-image: linear-gradient(to left, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 50%,rgba(255,255,255,0) 50%,rgba(246,246,246,0) 100%)
+	&-header
+		background: rgba(71, 151, 229, 0.42)
+	.content
+		.text
+			padding-right: 0
+			padding-left: 7.36rem 
+		
+.twelve_section
+	position: relative
+	.cont_footer
+		background-image: linear-gradient(to left, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 50%,rgba(255,255,255,0) 50%,rgba(246,246,246,0) 100%)
+	&-header
+		background: rgba(71, 151, 229, 0.42)
+	.content
+		.text
+			padding-right: 0
+			padding-left: 7.36rem 
+	
+/*Styling range slider*/
+
+.slider_row
+	display: flex
+
+*
+	box-sizing: border-box
+	&:before, &:after
+			box-sizing: border-box
+
+
+
+/*The end of range styling*/
+.calc_field
+	background: none
+	border: none
+	border-bottom: 1.5px solid $yellow
+.text-partners
+	overflow: hidden
+.partners
+	display: flex
+	justify-content: space-between
+	margin-top: 2rem
+	img
+		max-height: 2rem
+
+.range
+	margin: 0 
+.range > div.noUi-base
+	border: none
+	height: 0.33rem
+.noUi-target 
+	border: none
+	box-shadow: none
+	background: none
+.noUi-horizontal
+	height: 2px
+
+.c-1-color
+	background: $yellow
+.c-2-color 
+	background: grey
+.noUi-handle.noUi-handle-lower
+	background-color: $yellow
+	border-radius: 50%
+	height: 1.7rem
+	width: 1.7rem
+	border: 2px solid black
+.noUi-handle:after, .noUi-handle:before
+	display: none
+.noUi-horizontal .noUi-tooltip
+	bottom: 180%
+.noUi-tooltip
+	background-color: $yellow
+	width: 2.5rem
+	height: 1.5rem
+	border: none
+	padding: 0
+	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75)
+	&:after
+		width: 0
+		height: 0
+		border-left: 2px solid transparent
+		border-right: 2px solid transparent
+		border-top: 4px solid $yellow
+		content: ''
+		position: absolute
+		bottom: -4px
+		right: 1rem
+.slider_row
+	margin-bottom: 2rem
+@import "media" // Always at the end
