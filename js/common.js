@@ -1,7 +1,7 @@
 $(function() {
 
 	$('.hamburger').on('click', function() {
-      $('.menu_main').toggleClass('menu_state_open');
+     $('.burg_menu').toggleClass('menu_state_open');
       $('.hamburger').toggleClass('is-active');
     });
 
