@@ -1,9 +1,12 @@
 window.addEventListener("load",function(){
     var screensType = document.getElementsByClassName("current");
+    var screenHeader = document.getElementsByClassName("header");
+    
     var current = 0;
     for(i=0;i<screensType.length;i++){
         if(i!=current){
             screensType[i].style.display="none";
+            screenHeader[i].style.opacity="0";
         }
     }
     window.onwheel=
@@ -18,6 +21,8 @@ window.addEventListener("load",function(){
         if(e.deltaY<0){
             if(current!=0){
                 current--
+                var headerEkCount = 0;
+                    var headerEk = 0;
                 var staranimation = 0;
                 var opasOldTop=0;
                 var opasOl ='1';
@@ -31,6 +36,7 @@ window.addEventListener("load",function(){
                
                 var timeanimation= setInterval(function(){
                    if(staranimation<10){
+                    
                     staranimation++;
                     opasOl=opasOl-0.1;
                     opasNew.style.zIndex='9999';
@@ -49,6 +55,17 @@ window.addEventListener("load",function(){
                    }
                    else if(staranimation==10){
                     clearInterval(timeanimation);
+                    var rx = setInterval(function(){
+                        screenHeader[current+1].style.opacity="0";
+                        headerEkCount++
+                        headerEk=Number(headerEk);
+                        headerEk=headerEk+0.1;
+                        headerEk = String(headerEk);
+                        screenHeader[current].style.opacity=headerEk;
+                        if(headerEkCount==10){
+                            clearInterval(rx);
+                        }
+                    },150)
                    }
                    else{
                     opasNew.style.display="flex"
@@ -68,6 +85,8 @@ window.addEventListener("load",function(){
         else{
            if(current!=screensType.length-1){
             current++
+            var headerEkCount = 0;
+            var headerEk = 0;
             var staranimation = 0;
             var opasOldTop=0;
             var opasOl ='1';
@@ -101,6 +120,17 @@ window.addEventListener("load",function(){
                }
                else if(staranimation==10){
                 clearInterval(timeanimation);
+                var rx = setInterval(function(){
+                    screenHeader[current-1].style.opacity="0";
+                    headerEkCount++
+                    headerEk=Number(headerEk);
+                    headerEk=headerEk+0.1;
+                    headerEk = String(headerEk);
+                    screenHeader[current].style.opacity=headerEk;
+                    if(headerEkCount==10){
+                        clearInterval(rx);
+                    }
+                },150)
                }
                else{
                 opasNew.style.display="flex"
@@ -125,6 +155,8 @@ window.addEventListener("load",function(){
            
             if(current!=screensType.length-1){
                 current++
+                var headerEkCount = 0;
+            var headerEk = 0;
                 var staranimation = 0;
                 var opasOldTop=0;
                 var opasOl ='1';
@@ -158,6 +190,17 @@ window.addEventListener("load",function(){
                    }
                    else if(staranimation==10){
                     clearInterval(timeanimation);
+                    var rx = setInterval(function(){
+                        screenHeader[current-1].style.opacity="0";
+                        headerEkCount++
+                        headerEk=Number(headerEk);
+                        headerEk=headerEk+0.1;
+                        headerEk = String(headerEk);
+                        screenHeader[current].style.opacity=headerEk;
+                        if(headerEkCount==10){
+                            clearInterval(rx);
+                        }
+                    },150)
                    }
                    else{
                     opasNew.style.display="flex"
@@ -177,6 +220,8 @@ window.addEventListener("load",function(){
            
             if(current!=0){
                 current--
+                var headerEkCount = 0;
+                var headerEk = 0;
                 var staranimation = 0;
                 var opasOldTop=0;
                 var opasOl ='1';
@@ -208,6 +253,17 @@ window.addEventListener("load",function(){
                    }
                    else if(staranimation==10){
                     clearInterval(timeanimation);
+                    var rx = setInterval(function(){
+                        screenHeader[current+1].style.opacity="0";
+                        headerEkCount++
+                        headerEk=Number(headerEk);
+                        headerEk=headerEk+0.1;
+                        headerEk = String(headerEk);
+                        screenHeader[current].style.opacity=headerEk;
+                        if(headerEkCount==10){
+                            clearInterval(rx);
+                        }
+                    },150)
                    }
                    else{
                     opasNew.style.display="flex"
