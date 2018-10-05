@@ -6,8 +6,14 @@ window.addEventListener("load",function(){
             screensType[i].style.display="none";
         }
     }
-    window.onwheel = function exp (e) {
-        
+    window.onwheel=
+    
+    
+    function exp (e) {
+        window.onwheel= function(){return false}
+        setTimeout(function(){
+            window.onwheel=exp;
+        },2000)
         
         if(e.deltaY<0){
             if(current!=0){
