@@ -55,7 +55,7 @@ window.addEventListener("load",function(){
                     timeanimation=1
                     
                    }
-                },100)
+                },50)
                }
           
         }
@@ -106,7 +106,7 @@ window.addEventListener("load",function(){
                 clearInterval(timeanimation);
                
                }
-            },100)
+            },50)
            }
 
         }
@@ -163,7 +163,7 @@ window.addEventListener("load",function(){
                     clearInterval(timeanimation);
                    
                    }
-                },100)
+                },50)
                }
             return false
         }
@@ -214,7 +214,7 @@ window.addEventListener("load",function(){
                     timeanimation=1
                     
                    }
-                },100)
+                },50)
                }
             return false
         }
