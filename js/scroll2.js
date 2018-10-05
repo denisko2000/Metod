@@ -13,7 +13,7 @@ window.addEventListener("load",function(){
         window.onwheel= function(){return false}
         setTimeout(function(){
             window.onwheel=exp;
-        },2000)
+        },1000)
         
         if(e.deltaY<0){
             if(current!=0){
