@@ -1,25 +1,27 @@
 $(function() {
 
 	$('.hamburger').on('click', function() {
-     $('.burg_menu').toggleClass('menu_state_open');
-      $('.hamburger').toggleClass('is-active');
+		let data = $(this).data('parent');
+		console.log(data);
+      $('.burg_menu').filter(function(){return $(this).data("parent") == data}).toggleClass('menu_state_open');
+      $(this).toggleClass('is-active');
+
     });
 
-	const bg = ['first','second', 'third','forth'];
-	let i = 0
-
-    $('.button_striped').on('click', function(){
-    	(i>2)?(i=0):(i++)
-    	let param = `url(../img/${bg[i]}_bg.png`;
-    	$('.section').css("background-image", param);
-    });
+	$('.owl-carousel').owlCarousel({
+	    margin:10,
+	    loop:true,
+	    autoWidth:true,
+	    items:4
+	})
 
 	var height = parseInt($('.partners').css('height'))+parseInt($('.partners').css('margin-top'));
-	var textHeight = parseInt($('.content').css('height'));
-	console.log(textHeight)
+	var textHeight = parseInt($('.nine_section-content').css('height'));
 	$('.text-partners').css('height', textHeight-height+'px');
 
-	
+	var height = parseInt($('.forth_section-content h2').css('height'))+parseInt($('.forth_section-content h2').css('margin-top'))+parseInt($('.forth_section-content small').css('height'));
+	var textHeight = parseInt($('.forth_section-content').css('height'));
+	$('form').css('height', textHeight-height+'px');
 
 	$(".lang_menu").on('click', function() {
 		$(".lang_submenu").toggleClass('open');
