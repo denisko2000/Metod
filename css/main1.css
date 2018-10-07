@@ -38,7 +38,7 @@
     align-items: center;
 }
 
-#preloder .text {
+.preloader-text {
     color: white;
     min-height: 210px;
     min-width: 400px;

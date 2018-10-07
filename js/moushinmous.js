@@ -18,7 +18,7 @@ function animateSubheading(text, i) {
     if (i > text.length) {
         setInterval(
             function() {
-                $('.text').animate({
+                $('.preloader-text').animate({
                     opacity: 0.3
                 }, 700).animate({
                     opacity: 1
